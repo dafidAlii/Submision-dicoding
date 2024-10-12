@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding-block: 1rem;
+    margin-inline: auto;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;  
+    z-index: 9999;
+}
+
+header.navbar .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    color: rgb(255, 255, 255);
+    transition: all 0.1s ease-in-out;
+}
+
+
+header.navbar .nav-list li:hover a {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+}
+
+main .content {
+    
+    display: inline;
+    align-items: center;
+}
+.profile-image {
+    flex: 1; 
+}
+.description-profile {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 5px; 
+    width: 100%; 
+}
+
+.profile-image img {
+    width: 300px; 
+    height: auto; 
+    max-height: 300px; 
+    object-fit: cover; 
+}
+main .content .profile-image img {
+    width: 500px;
+    min-width: 250px;
+    margin: auto;
+}
+
+article {
+    flex: 2; 
+    max-width: 600px; 
+}
+div .description-contact {
+    background-color: #bbbbbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+
+.contact h1 {
+    font-size: 2rem;
+    
+}
+
+
+.contact-list {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.contact-list:hover {
+    color: #007bff; 
+}
+
+.contact-list i {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    text-align: center;
+
+}
+
+@media (max-width: 768px) {
+    header.navbar .nav-list ul {
+        padding: 0.5rem 1rem;
+        gap: 1rem; 
+    }
+
+    header.navbar .nav-list li a {
+        padding: 0.5rem 1rem; 
+        font-size: 1rem; 
+    }
+
+    main {
+        padding: 2rem 1rem; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    main .content .profile-image img {
+        width: 150%; 
+        max-width: 300px; 
+    }
+
+    .description-contact {
+        flex-direction: column;
+        padding: 15px; 
+    }
+
+    .contact-list {
+        font-size: 1rem; 
+}
+}
